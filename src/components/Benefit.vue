@@ -2,8 +2,8 @@
   <div>
     <div class="container">
       <div class="d-flex justify-content-center">
-        <div class="header-text ">
-          <h2>Kenapa Harus Memilih Graha Ananda Regency ?</h2>
+        <div class="header-text text-center">
+          <h2>Kenapa Harus Memilih Graha Ananda Regency</h2>
           <hr />
         </div>
       </div>
@@ -13,13 +13,13 @@
         </div>
       </div>
       <div class="row mt-3" v-else>
-        <div class="col-md-4">
+        <div
+          class="col-6 col-lg-4"
+          v-for="(benefit, index) in benefits"
+          :key="index"
+        >
           <div class="text-center">
-            <div
-              class="benefit"
-              v-for="(benefit, index) in benefits"
-              :key="index"
-            >
+            <div class="benefit">
               <img
                 :src="benefit.image"
                 style="height: 100px;"

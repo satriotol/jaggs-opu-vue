@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container-fluid brown">
-      <div class="row align-items-center h-100">
+      <div class="row align-items-center h-100 flex-column-reverse flex-md-row">
         <div class="col-md-6 h-100">
           <div class="text-right">
             <h2>Alamat</h2>
@@ -48,3 +48,4 @@ export default {
   },
 };
 </script>
+<style scoped></style>

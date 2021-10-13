@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="container-fluid header h-100">
-      <div class="row align-items-center h-100">
+      <div class="row align-items-center h-100 flex-column-reverse flex-md-row">
         <div class="col-md-2"></div>
-        <div class="col-md-4">
+        <div class="col-md-4 p-0">
           <h1>Graha Ananda</h1>
           <h2>Regency</h2>
           <p>
@@ -11,7 +11,7 @@
             Ananda Regency.
           </p>
         </div>
-        <div class="col-md-6 p-0">
+        <div class="col-md-6 p-0 order-1">
           <div
             id="carouselExampleSlidesOnly"
             class="carousel slide"
@@ -26,7 +26,7 @@
         </div>
       </div>
     </div>
-    <about-us class="header my-6 py-4"></about-us>
+    <about-us class="header my-3 py-4"></about-us>
     <benefit class="header my-6 py-4"></benefit>
     <Address class="my-6"></Address>
     <facility class="header my-6 py-4"></facility>
@@ -71,5 +71,13 @@ hr {
 .my-6 {
   margin-bottom: 4rem;
   margin-top: 4rem;
+}
+</style>
+<style scoped>
+@media (max-width: 768px) {
+  .col-md-4.p-0 {
+    text-align: center !important;
+    margin-top: 1rem;
+  }
 }
 </style>
