@@ -28,8 +28,9 @@
     </div>
     <about-us class="header my-3 py-4"></about-us>
     <benefit class="header my-6 py-4"></benefit>
-    <Address class="my-6"></Address>
+    <Address class="my-6" id="address"></Address>
     <facility class="header my-6 py-4"></facility>
+    <Product class="header my-6 py-4"></Product>
   </div>
 </template>
 <script>
@@ -38,9 +39,10 @@ import benefit from "@/components/Benefit.vue";
 import Address from "@/components/Address.vue";
 import Facility from "../components/Facility.vue";
 import axios from "axios";
+import Product from "../components/Product.vue";
 
 export default {
-  components: { aboutUs, benefit, Address, Facility },
+  components: { aboutUs, benefit, Address, Facility, Product },
   name: "Home",
   data() {
     return {
