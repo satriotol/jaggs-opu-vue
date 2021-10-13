@@ -26,15 +26,17 @@
         </div>
       </div>
     </div>
-    <about-us class="header mt-5"></about-us>
+    <about-us class="header my-6 py-4"></about-us>
+    <benefit class="header my-6 py-4"></benefit>
   </div>
 </template>
 <script>
 import aboutUs from "@/components/AboutUs.vue";
+import benefit from "@/components/Benefit.vue";
 import axios from "axios";
 
 export default {
-  components: { aboutUs },
+  components: { aboutUs, benefit },
   name: "Home",
   data() {
     return {
@@ -61,5 +63,9 @@ export default {
 }
 hr {
   border: 1px solid #534a40;
+}
+.my-6 {
+  margin-bottom: 4rem;
+  margin-top: 4rem;
 }
 </style>

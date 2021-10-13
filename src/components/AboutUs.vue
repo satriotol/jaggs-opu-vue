@@ -1,18 +1,18 @@
 <template>
   <div>
-    <div v-if="loading" class="text-center">
-      <div class="spinner-border" role="status">
-        <span class="sr-only">Loading...</span>
-      </div>
-    </div>
-    <div class="container" v-else>
+    <div class="container">
       <div class="d-flex justify-content-center">
-        <div class="header-text ">
+        <div class="header-text text-center">
           <h2>Tentang Kita</h2>
           <hr />
         </div>
       </div>
-      <div class="row mt-3">
+      <div v-if="loading" class="text-center">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <div class="row mt-3" v-else>
         <div class="col-md-6">
           <div class="embed-responsive embed-responsive-16by9">
             <iframe
