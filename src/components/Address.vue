@@ -2,7 +2,7 @@
   <div>
     <div class="container-fluid brown">
       <div class="row align-items-center h-100">
-        <div class="col-md-6 py-5 h-100">
+        <div class="col-md-6 h-100">
           <div class="text-right">
             <h2>Alamat</h2>
             <div v-if="loading" class="text-center">
@@ -13,7 +13,7 @@
             <p v-else>{{ location.address }}</p>
           </div>
         </div>
-        <div class="col-md-6 white py-5">
+        <div class="col-md-6 pr-0">
           <img :src="location.image" class="img-fluid" alt="" />
         </div>
       </div>
