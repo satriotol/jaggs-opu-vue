@@ -26,7 +26,7 @@
         </div>
       </div>
     </div>
-    <about-us class="header"></about-us>
+    <about-us class="header mt-5"></about-us>
   </div>
 </template>
 <script>

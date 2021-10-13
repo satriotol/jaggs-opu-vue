@@ -1,6 +1,11 @@
 <template>
   <div>
-    <div class="container">
+    <div v-if="loading" class="text-center">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <div class="container" v-else>
       <div class="d-flex justify-content-center">
         <div class="header-text ">
           <h2>Tentang Kita</h2>
@@ -8,7 +13,15 @@
         </div>
       </div>
       <div class="row mt-3">
-        <div class="col-md-6"></div>
+        <div class="col-md-6">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe
+              class="embed-responsive-item"
+              :src="about.link"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
         <div class="col-md-6">
           <p>
             {{ about.description }}
@@ -38,14 +51,19 @@ export default {
   data() {
     return {
       about: [],
+      loading: false,
     };
   },
   mounted() {
+    this.loading = true;
     axios
       .get("https://admingraha.jaggs.id/api/about", {
         headers: { accept: "application/json" },
       })
-      .then((res) => (this.about = res.data.data[0]));
+      .then((res) => {
+        this.loading = false;
+        this.about = res.data.data[0];
+      });
   },
 };
 </script>
