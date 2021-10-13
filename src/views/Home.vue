@@ -28,15 +28,17 @@
     </div>
     <about-us class="header my-6 py-4"></about-us>
     <benefit class="header my-6 py-4"></benefit>
+    <Address class="my-6 "></Address>
   </div>
 </template>
 <script>
 import aboutUs from "@/components/AboutUs.vue";
 import benefit from "@/components/Benefit.vue";
+import Address from "@/components/Address.vue";
 import axios from "axios";
 
 export default {
-  components: { aboutUs, benefit },
+  components: { aboutUs, benefit, Address },
   name: "Home",
   data() {
     return {
