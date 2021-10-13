@@ -15,7 +15,4 @@ export default {
   --brown: #534a40;
   --white: #ffffff;
 }
-.navbar {
-  padding: 0rem 5rem;
-}
 </style>

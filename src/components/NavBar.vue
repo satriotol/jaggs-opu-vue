@@ -37,10 +37,28 @@
   </div>
 </template>
 <style scoped>
-.nav-item {
-  padding: 1rem 0rem;
-  margin: 0rem 0.5rem;
+@media (max-width: 768px) {
+  .nav-item {
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  a.nav-link {
+    text-align: center;
+  }
+  li.nav-item.active {
+    border-radius: 5px;
+  }
 }
+@media (min-width: 768px) {
+  .navbar {
+    padding: 0rem 5rem;
+  }
+  .nav-item {
+    padding: 1rem 0rem;
+    margin: 0rem 0.5rem;
+  }
+}
+
 .active {
   background-color: var(--brown);
 }
