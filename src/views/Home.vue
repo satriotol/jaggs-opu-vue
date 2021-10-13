@@ -12,13 +12,15 @@
           </p>
         </div>
         <div class="col-md-6 p-0">
-          <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-              <h1 class="display-4">Fluid jumbotron</h1>
-              <p class="lead">
-                This is a modified jumbotron that occupies the entire horizontal
-                space of its parent.
-              </p>
+          <div
+            id="carouselExampleSlidesOnly"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img :src="sliders.image" class="d-block w-100" alt="..." />
+              </div>
             </div>
           </div>
         </div>
@@ -29,9 +31,28 @@
 </template>
 <script>
 import aboutUs from "@/components/AboutUs.vue";
+import axios from "axios";
 
 export default {
   components: { aboutUs },
+  name: "Home",
+  data() {
+    return {
+      sliders: [],
+    };
+  },
+  created() {
+    this.getJumbotron();
+  },
+  methods: {
+    getJumbotron() {
+      axios
+        .get("https://admingraha.jaggs.id/api/slider", {
+          headers: { accept: "application/json" },
+        })
+        .then((res) => (this.sliders = res.data.data[0]));
+    },
+  },
 };
 </script>
 <style>
