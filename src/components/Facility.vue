@@ -22,7 +22,7 @@
             >
               <img
                 :src="facility.image"
-                style="height: 100px;"
+                style="height: 200px;"
                 class="img-fluid"
                 alt=""
               />
