@@ -24,10 +24,21 @@
         </div>
       </div>
     </div>
+    <about-us class="header"></about-us>
   </div>
 </template>
-<style scoped>
+<script>
+import aboutUs from "@/components/AboutUs.vue";
+
+export default {
+  components: { aboutUs },
+};
+</script>
+<style>
 .header {
   color: var(--brown);
+}
+hr {
+  border: 1px solid #534a40;
 }
 </style>
