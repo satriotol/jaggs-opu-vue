@@ -1,7 +1,13 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#"
+        ><img
+          src="../../public/LOGO.png"
+          class="img-fluid"
+          style="height:40px"
+          alt=""
+      /></a>
       <button
         class="navbar-toggler"
         type="button"
