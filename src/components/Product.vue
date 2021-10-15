@@ -32,10 +32,18 @@
         </div>
         <div class="row mt-5" v-else>
           <div class="col-md-6">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
-            est quia necessitatibus suscipit nihil inventore et maxime eligendi
-            consequatur distinctio officia accusantium dolor possimus quam,
-            mollitia laborum autem? Aperiam, temporibus.
+            <img src="../../public/Rumah T 4.png" class="img-fluid" />
+            <div class="row mt-4">
+              <div class="col-md-4">
+                <img src="../../public/Rumah T 4.png" class="img-fluid" />
+              </div>
+              <div class="col-md-4">
+                <img src="../../public/Rumah T 4.png" class="img-fluid" />
+              </div>
+              <div class="col-md-4">
+                <img src="../../public/Rumah T 4.png" class="img-fluid" />
+              </div>
+            </div>
           </div>
           <div class="col-md-6">
             <h3>Nama Produk</h3>
