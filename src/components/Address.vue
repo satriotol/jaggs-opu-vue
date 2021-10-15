@@ -1,16 +1,11 @@
 <template>
   <div>
-    <div class="container-fluid brown">
+    <div class="container-fluid brown" v-if="!loading">
       <div class="row align-items-center h-100 flex-column-reverse flex-md-row">
         <div class="col-md-6 h-100">
           <div class="text-right">
             <h2>Alamat</h2>
-            <div v-if="loading" class="text-center">
-              <div class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
-              </div>
-            </div>
-            <p v-else>{{ location.address }}</p>
+            <p>{{ location.address }}</p>
           </div>
         </div>
         <div class="col-md-6 pr-0">
@@ -48,4 +43,15 @@ export default {
   },
 };
 </script>
-<style scoped></style>
+<style scoped>
+@media (max-width: 768px) {
+  .col-md-6.pr-0 {
+    padding-left: 0;
+  }
+  .text-right {
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center !important;
+  }
+}
+</style>

@@ -23,6 +23,12 @@
         <div class="form-group mt-3">
           <select name="" class="form-control" id="">
             <option value="">Pilih Product</option>
+            <option
+              :value="product.id"
+              v-for="(product, index) in products"
+              :key="index"
+              >{{ product.title }}</option
+            >
           </select>
         </div>
         <div v-if="loading" class="text-center">
@@ -34,20 +40,20 @@
           <div class="col-md-6">
             <img src="../../public/Rumah T 4.png" class="img-fluid" />
             <div class="row mt-4">
-              <div class="col-md-4">
+              <div class="col col-md-4">
                 <img src="../../public/Rumah T 4.png" class="img-fluid" />
               </div>
-              <div class="col-md-4">
+              <div class="col col-md-4">
                 <img src="../../public/Rumah T 4.png" class="img-fluid" />
               </div>
-              <div class="col-md-4">
+              <div class="col col-md-4">
                 <img src="../../public/Rumah T 4.png" class="img-fluid" />
               </div>
             </div>
           </div>
           <div class="col-md-6">
             <h3>Nama Produk</h3>
-            <p>
+            <p class="text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Necessitatibus, dolorem voluptatum, expedita laboriosam delectus
               id magni architecto consequuntur voluptas ut commodi voluptatibus.
@@ -99,13 +105,14 @@ export default {
     return {
       facilities: [],
       loading: false,
+      products: [],
     };
   },
   mounted() {
     this.loading = true;
-    axios.get("https://admingraha.jaggs.id/api/facility").then((res) => {
+    axios.get("https://admingraha.jaggs.id/api/product_name").then((res) => {
       this.loading = false;
-      this.facilities = res.data.data;
+      this.products = res.data.data;
     });
   },
   methods: {

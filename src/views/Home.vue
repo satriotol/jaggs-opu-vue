@@ -1,5 +1,14 @@
 <template>
   <div>
+    <div class="position-fixed">
+      <a :href="wa.link" target="_blank">
+        <img
+          src="../../public/Whatapps Logo 1.png"
+          class="img-fluid wa"
+          alt=""
+        />
+      </a>
+    </div>
     <div class="container-fluid header h-100">
       <div class="row align-items-center h-100 flex-column-reverse flex-md-row">
         <div class="col-md-2"></div>
@@ -10,6 +19,9 @@
             Segera Wujudkan Keluarga Mandiri Sejahtera Hanya Di Perumahan Graha
             Ananda Regency.
           </p>
+          <button class="btn btn-primary brown">
+            Download Pricce List
+          </button>
         </div>
         <div class="col-md-6 p-0 order-1">
           <div
@@ -31,6 +43,7 @@
     <Address class="my-6" id="address"></Address>
     <facility class="header my-6 py-4"></facility>
     <Product class="header my-6 py-4"></Product>
+    <site-plan class="header my-6 py-4"></site-plan>
   </div>
 </template>
 <script>
@@ -40,16 +53,22 @@ import Address from "@/components/Address.vue";
 import Facility from "../components/Facility.vue";
 import axios from "axios";
 import Product from "../components/Product.vue";
-
+import SitePlan from "../components/SitePlan.vue";
 export default {
-  components: { aboutUs, benefit, Address, Facility, Product },
+  components: { aboutUs, benefit, Address, Facility, Product, SitePlan },
   name: "Home",
   data() {
     return {
       sliders: [],
+      wa: [],
     };
   },
   created() {
+    axios
+      .get("https://admingraha.jaggs.id/api/whatsapp", {
+        headers: { accept: "application/json" },
+      })
+      .then((res) => (this.wa = res.data.data[0]));
     this.getJumbotron();
   },
   methods: {
@@ -69,10 +88,17 @@ export default {
 }
 hr {
   border: 1px solid #534a40;
+  background-color: #534a40;
 }
 .my-6 {
   margin-bottom: 4rem;
   margin-top: 4rem;
+}
+@media (max-width: 768px) {
+  .my-6 {
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+  }
 }
 </style>
 <style scoped>
@@ -81,5 +107,21 @@ hr {
     text-align: center !important;
     margin-top: 1rem;
   }
+}
+button.btn.btn-primary.brown {
+  background-color: var(--brown);
+  border-color: var(--brown);
+  border-radius: 50px;
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+.wa {
+  position: fixed;
+  height: 60px;
+  bottom: 40px;
+  text-align: center;
+  font-size: 30px;
+  z-index: 100;
+  right: 15px;
 }
 </style>
