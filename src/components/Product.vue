@@ -21,7 +21,7 @@
           <br />
         </div>
         <div class="form-group mt-3">
-          <select
+          <!-- <select
             name=""
             class="form-control"
             id=""
@@ -34,13 +34,25 @@
               v-for="(product, index) in products"
               :key="index"
               >{{ product.title }}</option
-            >
-          </select>
+            > -->
+          <v-select
+            :options="products"
+            style="background-color:white;"
+            :reduce="(products) => products.id"
+            v-model="product_id"
+            @input="getProduct"
+            label="title"
+          />
+
+          <!-- </select> -->
         </div>
         <div v-if="loading" class="text-center">
           <div class="spinner-border" role="status">
             <span class="sr-only">Loading...</span>
           </div>
+        </div>
+        <div v-else-if="product == null" class="text-center">
+          <h4>Pilih Produk Dulu</h4>
         </div>
         <div v-else>
           <div class="row mt-5">
@@ -134,6 +146,7 @@ export default {
       this.gambar_default = data.image[0].image;
     },
     getProduct() {
+      this.loading = true;
       axios
         .get("https://admingraha.jaggs.id/api/product", {
           params: {

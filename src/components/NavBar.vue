@@ -22,19 +22,39 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+          <li
+            class="nav-item"
+            :class="{ active: targetId == 'home' }"
+            @click="select('home')"
+          >
             <a class="nav-link" href="#home">Tentang</a>
           </li>
-          <li class="nav-item">
+          <li
+            class="nav-item"
+            :class="{ active: targetId == 'address' }"
+            @click="select('address')"
+          >
             <a class="nav-link" href="#address">Lokasi</a>
           </li>
-          <li class="nav-item">
+          <li
+            class="nav-item"
+            :class="{ active: targetId == 'facility' }"
+            @click="select('facility')"
+          >
             <a class="nav-link" href="#facility">Fasilitas</a>
           </li>
-          <li class="nav-item">
+          <li
+            class="nav-item"
+            :class="{ active: targetId == 'product' }"
+            @click="select('product')"
+          >
             <a class="nav-link" href="#product">Produk</a>
           </li>
-          <li class="nav-item">
+          <li
+            class="nav-item"
+            :class="{ active: targetId == 'siteplan' }"
+            @click="select('siteplan')"
+          >
             <a class="nav-link" href="#siteplan">Siteplan</a>
           </li>
         </ul>
@@ -42,6 +62,21 @@
     </nav>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      targetId: "home",
+    };
+  },
+  methods: {
+    select(event) {
+      this.targetId = event;
+      console.log(event);
+    },
+  },
+};
+</script>
 <style scoped>
 @media (max-width: 768px) {
   .nav-item {

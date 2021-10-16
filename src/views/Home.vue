@@ -20,7 +20,7 @@
             Ananda Regency.
           </p>
           <button class="btn btn-primary brown">
-            Download Pricce List
+            Download Price List
           </button>
         </div>
         <div class="col-md-6 p-0 order-1">
