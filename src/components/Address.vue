@@ -2,7 +2,7 @@
   <div>
     <div class="container-fluid brown" v-if="!loading">
       <div class="row align-items-center h-100 flex-column-reverse flex-md-row">
-        <div class="col-md-6 h-100">
+        <div class="col-md-6 h-100" data-aos="fade-right">
           <div class="text-right">
             <h2>Alamat</h2>
             <p>{{ location.address }}</p>
