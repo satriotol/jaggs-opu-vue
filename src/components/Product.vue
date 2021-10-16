@@ -21,7 +21,13 @@
           <br />
         </div>
         <div class="form-group mt-3">
-          <select name="" class="form-control" id="">
+          <select
+            name=""
+            class="form-control"
+            id=""
+            v-model="product_id"
+            @change="getProduct"
+          >
             <option value="">Pilih Product</option>
             <option
               :value="product.id"
@@ -36,33 +42,31 @@
             <span class="sr-only">Loading...</span>
           </div>
         </div>
-        <div class="row mt-5" v-else>
-          <div class="col-md-6">
-            <img src="../../public/Rumah T 4.png" class="img-fluid" />
-            <div class="row mt-4">
-              <div class="col col-md-4">
-                <img src="../../public/Rumah T 4.png" class="img-fluid" />
-              </div>
-              <div class="col col-md-4">
-                <img src="../../public/Rumah T 4.png" class="img-fluid" />
-              </div>
-              <div class="col col-md-4">
-                <img src="../../public/Rumah T 4.png" class="img-fluid" />
+        <div v-else>
+          <div class="row mt-5">
+            <div class="col-md-6">
+              <img :src="gambar_default" class="img-fluid main" />
+              <div class="row mt-4">
+                <div
+                  class="col col-md-4"
+                  v-for="(image, index) in product.image"
+                  :key="index"
+                  @click="changeImage(image.image)"
+                >
+                  <img :src="image.image" class="img-fluid" />
+                </div>
               </div>
             </div>
+            <div class="col-md-6">
+              <h3>{{ product.title }}</h3>
+              <p class="text-justify">
+                {{ product.description }}
+              </p>
+            </div>
           </div>
-          <div class="col-md-6">
-            <h3>Nama Produk</h3>
-            <p class="text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus, dolorem voluptatum, expedita laboriosam delectus
-              id magni architecto consequuntur voluptas ut commodi voluptatibus.
-              Voluptates similique aut tenetur nobis consequuntur illo ab!
-            </p>
+          <div class="text-center mt-4">
+            <h2>{{ product.price }}</h2>
           </div>
-        </div>
-        <div class="text-center mt-4">
-          <h2>HARGA</h2>
         </div>
       </div>
     </div>
@@ -96,6 +100,10 @@
   background-color: var(--brown);
   color: white;
 }
+img.main {
+  height: 400px;
+  object-fit: cover;
+}
 </style>
 <script>
 import axios from "axios";
@@ -103,9 +111,11 @@ import axios from "axios";
 export default {
   data() {
     return {
-      facilities: [],
+      product: [],
       loading: false,
       products: [],
+      product_id: "",
+      gambar_default: "",
     };
   },
   mounted() {
@@ -116,7 +126,26 @@ export default {
     });
   },
   methods: {
-    getProduct() {},
+    changeImage(urlImage) {
+      this.gambar_default = urlImage;
+    },
+    setDataPicture(data) {
+      this.product = data;
+      this.gambar_default = data.image[0].image;
+    },
+    getProduct() {
+      axios
+        .get("https://admingraha.jaggs.id/api/product", {
+          params: {
+            id: this.product_id,
+          },
+        })
+        .then((res) => {
+          this.loading = false;
+          this.setDataPicture(res.data.data[0]);
+          this.product = res.data.data[0];
+        });
+    },
   },
 };
 </script>
