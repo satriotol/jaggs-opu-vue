@@ -12,7 +12,7 @@
           <span class="sr-only">Loading...</span>
         </div>
       </div>
-      <div class="row mt-3" v-else>
+      <div class="row mt-3" v-else data-aos="fade-down">
         <div class="col-md-4">
           <div class="text-center">
             <div
