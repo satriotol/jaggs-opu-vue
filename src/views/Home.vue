@@ -9,7 +9,7 @@
         />
       </a>
     </div>
-    <div class="container-fluid header h-100">
+    <div class="container-fluid header h-100" id="home">
       <div class="row align-items-center h-100 flex-column-reverse flex-md-row">
         <div class="col-md-2"></div>
         <div class="col-md-4 p-0">
@@ -24,17 +24,15 @@
           </button>
         </div>
         <div class="col-md-6 p-0 order-1">
-          <div
-            id="carouselExampleSlidesOnly"
-            class="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img :src="sliders.image" class="d-block w-100" alt="..." />
-              </div>
-            </div>
-          </div>
+          <slider animation="fade" class="slider-style">
+            <slider-item v-for="(slider, index) in sliders" :key="index">
+              <img
+                :src="slider.image"
+                class="d-block w-100 h-100"
+                style="object-fit: cover;"
+              />
+            </slider-item>
+          </slider>
         </div>
       </div>
     </div>
@@ -56,6 +54,8 @@ import axios from "axios";
 import Product from "../components/Product.vue";
 import SitePlan from "../components/SitePlan.vue";
 import TheFooter from "../components/TheFooter.vue";
+import { Slider, SliderItem } from "vue-easy-slider";
+
 export default {
   components: {
     aboutUs,
@@ -65,6 +65,8 @@ export default {
     Product,
     SitePlan,
     TheFooter,
+    Slider,
+    SliderItem,
   },
   name: "Home",
   data() {
@@ -82,12 +84,15 @@ export default {
     this.getJumbotron();
   },
   methods: {
+    hello($event) {
+      console.log(`hello index: ${$event}`);
+    },
     getJumbotron() {
       axios
         .get("https://admingraha.jaggs.id/api/slider", {
           headers: { accept: "application/json" },
         })
-        .then((res) => (this.sliders = res.data.data[0]));
+        .then((res) => (this.sliders = res.data.data));
     },
   },
 };
@@ -117,6 +122,9 @@ hr {
     text-align: center !important;
     margin-top: 1rem;
   }
+  .slider-style {
+    height: 250px;
+  }
 }
 button.btn.btn-primary.brown {
   background-color: var(--brown);
@@ -124,6 +132,9 @@ button.btn.btn-primary.brown {
   border-radius: 50px;
   font-size: 1.1rem;
   padding: 1rem;
+}
+.slider-style {
+  height: 500px !important;
 }
 .wa {
   position: fixed;

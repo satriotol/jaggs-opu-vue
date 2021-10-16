@@ -1,6 +1,8 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light navbar-inverse fixed-top"
+    >
       <a class="navbar-brand" href="#"
         ><img
           src="../../public/LOGO.png"
@@ -72,12 +74,14 @@ export default {
   methods: {
     select(event) {
       this.targetId = event;
-      console.log(event);
     },
   },
 };
 </script>
 <style scoped>
+/* .navbar {
+  border-bottom: 2px solid var(--brown);
+} */
 @media (max-width: 768px) {
   .nav-item {
     margin-top: 0.25rem !important;
