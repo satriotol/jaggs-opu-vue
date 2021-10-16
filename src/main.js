@@ -9,6 +9,7 @@ import EasySlider from 'vue-easy-slider'
 
 
 import "vue-select/dist/vue-select.css";
+import './registerServiceWorker'
 
 Vue.component("v-select", vSelect);
 Vue.use(EasySlider)
