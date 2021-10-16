@@ -21,20 +21,6 @@
           <br />
         </div>
         <div class="form-group mt-3">
-          <!-- <select
-            name=""
-            class="form-control"
-            id=""
-            v-model="product_id"
-            @change="getProduct"
-          >
-            <option value="">Pilih Product</option>
-            <option
-              :value="product.id"
-              v-for="(product, index) in products"
-              :key="index"
-              >{{ product.title }}</option
-            > -->
           <v-select
             :options="products"
             style="background-color:white;"
@@ -51,8 +37,8 @@
             <span class="sr-only">Loading...</span>
           </div>
         </div>
-        <div v-else-if="product == null" class="text-center">
-          <h4>Pilih Produk Dulu</h4>
+        <div v-else-if="product == null || product == ''" class="text-center">
+          <h4>Silahkan Pilih Produk</h4>
         </div>
         <div v-else>
           <div class="row mt-5">
