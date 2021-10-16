@@ -1,14 +1,5 @@
 <template>
   <div>
-    <div class="position-fixed">
-      <a :href="wa.link" target="_blank">
-        <img
-          src="../../public/Whatapps Logo 1.png"
-          class="img-fluid wa"
-          alt=""
-        />
-      </a>
-    </div>
     <div class="container-fluid header h-100" id="home">
       <div class="row align-items-center h-100 flex-column-reverse flex-md-row">
         <div class="col-md-2"></div>
@@ -43,6 +34,15 @@
     <Product class="header my-6 py-4" id="product"></Product>
     <site-plan class="header my-6 py-4" id="siteplan"></site-plan>
     <the-footer class="mt-5 pt-4"></the-footer>
+    <div class="position-fixed">
+      <a :href="wa.link" target="_blank">
+        <img
+          src="../../public/Whatapps Logo 1.png"
+          class="img-fluid wa"
+          alt=""
+        />
+      </a>
+    </div>
   </div>
 </template>
 <script>

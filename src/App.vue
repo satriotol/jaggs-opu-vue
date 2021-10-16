@@ -14,6 +14,9 @@ export default {
 html {
   scroll-behavior: smooth;
 }
+.margin-navbar {
+  margin-top: 70px;
+}
 :root {
   --brown: #534a40;
   --white: #ffffff;
