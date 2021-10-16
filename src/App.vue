@@ -11,6 +11,9 @@ export default {
 };
 </script>
 <style>
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --brown: #534a40;
   --white: #ffffff;

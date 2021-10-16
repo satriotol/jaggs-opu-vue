@@ -41,9 +41,9 @@
     <about-us class="header my-3 py-4"></about-us>
     <benefit class="header my-6 py-4"></benefit>
     <Address class="my-6" id="address"></Address>
-    <facility class="header my-6 py-4"></facility>
-    <Product class="header my-6 py-4"></Product>
-    <site-plan class="header my-6 py-4"></site-plan>
+    <facility class="header my-6 py-4" id="facility"></facility>
+    <Product class="header my-6 py-4" id="product"></Product>
+    <site-plan class="header my-6 py-4" id="siteplan"></site-plan>
     <the-footer class="mt-5 pt-4"></the-footer>
   </div>
 </template>

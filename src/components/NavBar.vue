@@ -23,19 +23,19 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Tentang</a>
+            <a class="nav-link" href="#home">Tentang</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Lokasi</a>
+            <a class="nav-link" href="#address">Lokasi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Fasilitas</a>
+            <a class="nav-link" href="#facility">Fasilitas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Produk</a>
+            <a class="nav-link" href="#product">Produk</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#address">Siteplan</a>
+            <a class="nav-link" href="#siteplan">Siteplan</a>
           </li>
         </ul>
       </div>
