@@ -44,6 +44,7 @@
     <facility class="header my-6 py-4"></facility>
     <Product class="header my-6 py-4"></Product>
     <site-plan class="header my-6 py-4"></site-plan>
+    <the-footer class="mt-5 pt-4"></the-footer>
   </div>
 </template>
 <script>
@@ -54,8 +55,17 @@ import Facility from "../components/Facility.vue";
 import axios from "axios";
 import Product from "../components/Product.vue";
 import SitePlan from "../components/SitePlan.vue";
+import TheFooter from "../components/TheFooter.vue";
 export default {
-  components: { aboutUs, benefit, Address, Facility, Product, SitePlan },
+  components: {
+    aboutUs,
+    benefit,
+    Address,
+    Facility,
+    Product,
+    SitePlan,
+    TheFooter,
+  },
   name: "Home",
   data() {
     return {
