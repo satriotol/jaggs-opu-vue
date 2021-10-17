@@ -6,6 +6,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import vSelect from "vue-select";
 import EasySlider from 'vue-easy-slider'
+import VueCarousel from 'vue-carousel';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -14,7 +15,7 @@ import "vue-select/dist/vue-select.css";
 
 Vue.component("v-select", vSelect);
 Vue.use(EasySlider)
-
+Vue.use(VueCarousel);
 
 Vue.config.productionTip = false
 Vue.use(VueAxios, axios)

@@ -44,15 +44,21 @@
           <div class="row mt-5">
             <div class="col-md-6">
               <img :src="gambar_default" class="img-fluid main" />
-              <div class="row mt-4">
-                <div
-                  class="col col-md-4"
-                  v-for="(image, index) in product.image"
-                  :key="index"
-                  @click="changeImage(image.image)"
+              <div class="mt-4">
+                <carousel
+                  :minSwipeDistance="0"
+                  :perPage="3"
+                  :paginationEnabled="false"
+                  class="text-center"
                 >
-                  <img :src="image.image" class="img-fluid" />
-                </div>
+                  <slide v-for="(image, index) in product.image" :key="index">
+                    <img
+                      class="img-carousel"
+                      :src="image.image"
+                      @click="changeImage(image.image)"
+                    />
+                  </slide>
+                </carousel>
               </div>
             </div>
             <div class="col-md-6">
@@ -101,6 +107,18 @@
 img.main {
   height: 400px;
   object-fit: cover;
+}
+.img-carousel {
+  height: 100px;
+  object-fit: cover;
+  width: 160px;
+}
+@media (max-width: 768px) {
+  .img-carousel {
+    height: 100px;
+    object-fit: cover;
+    width: 120px;
+  }
 }
 </style>
 <script>
