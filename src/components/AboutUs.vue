@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="col-md-6" data-aos="fade-right">
-          <p>
+          <p class="text-justify">
             {{ about.description }}
           </p>
         </div>

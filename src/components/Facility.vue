@@ -13,13 +13,13 @@
         </div>
       </div>
       <div class="row mt-3" v-else data-aos="fade-down">
-        <div class="col-md-4">
+        <div
+          class="col-md-4"
+          v-for="(facility, index) in facilities"
+          :key="index"
+        >
           <div class="text-center">
-            <div
-              class="benefit"
-              v-for="(facility, index) in facilities"
-              :key="index"
-            >
+            <div class="benefit">
               <img
                 :src="facility.image"
                 style="height: 200px;"

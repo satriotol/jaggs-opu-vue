@@ -104,9 +104,10 @@
   background-color: var(--brown);
   color: white;
 }
-img.main {
+.main {
   height: 400px;
   object-fit: cover;
+  width: 100%;
 }
 .img-carousel {
   height: 100px;

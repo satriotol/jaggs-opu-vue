@@ -4,8 +4,8 @@
       <div class="row align-items-center h-100 flex-column-reverse flex-md-row">
         <div class="col-md-2"></div>
         <div class="col-md-4 p-0">
-          <h1>Graha Ananda</h1>
-          <h2>Regency</h2>
+          <h1 class="m-0">Graha Ananda</h1>
+          <h1>Regency</h1>
           <p>
             Segera Wujudkan Keluarga Mandiri Sejahtera Hanya Di Perumahan Graha
             Ananda Regency.

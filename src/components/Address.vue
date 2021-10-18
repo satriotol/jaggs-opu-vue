@@ -5,7 +5,7 @@
         <div class="col-md-6 h-100" data-aos="fade-right">
           <div class="text-right">
             <h2>Alamat</h2>
-            <p>{{ location.address }}</p>
+            <h5>{{ location.address }}</h5>
           </div>
         </div>
         <div class="col-md-6 pr-0">
