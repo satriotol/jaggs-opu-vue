@@ -12,9 +12,10 @@
           <span class="sr-only">Loading...</span>
         </div>
       </div>
-      <div class="row mt-3" v-else data-aos="fade-down">
+      <div class="row mt-3" v-else>
         <div
           class="col-md-4"
+          data-aos="fade-down"
           v-for="(facility, index) in facilities"
           :key="index"
         >
