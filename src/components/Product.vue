@@ -26,6 +26,7 @@
             style="background-color:white;"
             :reduce="(products) => products.id"
             v-model="product_id"
+            placeholder="Pilih Tipe Produk"
             @input="getProduct"
             label="title"
           />
@@ -36,9 +37,6 @@
           <div class="spinner-border" role="status">
             <span class="sr-only">Loading...</span>
           </div>
-        </div>
-        <div v-else-if="product == null || product == ''" class="text-center">
-          <h4>Silahkan Pilih Produk</h4>
         </div>
         <div v-else>
           <div class="row mt-5">
@@ -131,7 +129,7 @@ export default {
       product: [],
       loading: false,
       products: [],
-      product_id: "",
+      product_id: null,
       gambar_default: "",
     };
   },
@@ -141,6 +139,7 @@ export default {
       this.loading = false;
       this.products = res.data.data;
     });
+    this.getProduct();
   },
   methods: {
     changeImage(urlImage) {
@@ -160,8 +159,13 @@ export default {
         })
         .then((res) => {
           this.loading = false;
-          this.setDataPicture(res.data.data[0]);
-          this.product = res.data.data[0];
+          if (this.product_id != null) {
+            this.setDataPicture(res.data.data[0]);
+            this.product = res.data.data[0];
+          } else {
+            this.setDataPicture(res.data.data);
+            this.product = res.data.data;
+          }
         });
     },
   },
