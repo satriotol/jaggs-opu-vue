@@ -65,7 +65,7 @@ export default {
   mounted() {
     this.loading = true;
     axios
-      .get("https://admingraha.jaggs.id/api/about", {
+      .get("https://admin.grahaanandaregency.com/api/about", {
         headers: { accept: "application/json" },
       })
       .then((res) => {

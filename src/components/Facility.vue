@@ -62,10 +62,12 @@ export default {
   },
   mounted() {
     this.loading = true;
-    axios.get("https://admingraha.jaggs.id/api/facility").then((res) => {
-      this.loading = false;
-      this.facilities = res.data.data;
-    });
+    axios
+      .get("https://admin.grahaanandaregency.com/api/facility")
+      .then((res) => {
+        this.loading = false;
+        this.facilities = res.data.data;
+      });
   },
 };
 </script>

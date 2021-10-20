@@ -65,10 +65,12 @@ export default {
   },
   mounted() {
     this.loading = true;
-    axios.get("https://admingraha.jaggs.id/api/benefit").then((res) => {
-      this.loading = false;
-      this.benefits = res.data.data;
-    });
+    axios
+      .get("https://admin.grahaanandaregency.com/api/benefit")
+      .then((res) => {
+        this.loading = false;
+        this.benefits = res.data.data;
+      });
   },
 };
 </script>

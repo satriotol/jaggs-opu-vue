@@ -148,10 +148,12 @@ export default {
   },
   mounted() {
     this.loading = true;
-    axios.get("https://admingraha.jaggs.id/api/product_name").then((res) => {
-      this.loading = false;
-      this.products = res.data.data;
-    });
+    axios
+      .get("https://admin.grahaanandaregency.com/api/product_name")
+      .then((res) => {
+        this.loading = false;
+        this.products = res.data.data;
+      });
     this.getProduct();
   },
   methods: {
@@ -165,7 +167,7 @@ export default {
     getProduct() {
       this.loading = true;
       axios
-        .get("https://admingraha.jaggs.id/api/product", {
+        .get("https://admin.grahaanandaregency.com/api/product", {
           params: {
             id: this.product_id,
           },

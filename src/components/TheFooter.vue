@@ -67,10 +67,12 @@ export default {
   },
   mounted() {
     this.loading = true;
-    axios.get("https://admingraha.jaggs.id/api/social_media").then((res) => {
-      this.loading = false;
-      this.social_medias = res.data.data;
-    });
+    axios
+      .get("https://admin.grahaanandaregency.com/api/social_media")
+      .then((res) => {
+        this.loading = false;
+        this.social_medias = res.data.data;
+      });
   },
 };
 </script>

@@ -42,10 +42,12 @@ export default {
   },
   mounted() {
     this.loading = true;
-    axios.get("https://admingraha.jaggs.id/api/location").then((res) => {
-      this.loading = false;
-      this.location = res.data.data[0];
-    });
+    axios
+      .get("https://admin.grahaanandaregency.com/api/location")
+      .then((res) => {
+        this.loading = false;
+        this.location = res.data.data[0];
+      });
   },
 };
 </script>

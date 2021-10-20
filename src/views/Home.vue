@@ -73,7 +73,7 @@ export default {
   },
   created() {
     axios
-      .get("https://admingraha.jaggs.id/api/whatsapp", {
+      .get("https://admin.grahaanandaregency.com/api/whatsapp", {
         headers: { accept: "application/json" },
       })
       .then((res) => (this.wa = res.data.data[0]));
@@ -85,7 +85,7 @@ export default {
     },
     getJumbotron() {
       axios
-        .get("https://admingraha.jaggs.id/api/slider", {
+        .get("https://admin.grahaanandaregency.com/api/slider", {
           headers: { accept: "application/json" },
         })
         .then((res) => (this.sliders = res.data.data));

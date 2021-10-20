@@ -64,10 +64,12 @@ export default {
   },
   mounted() {
     this.loading = true;
-    axios.get("https://admingraha.jaggs.id/api/site_plan").then((res) => {
-      this.loading = false;
-      this.siteplan = res.data.data[0];
-    });
+    axios
+      .get("https://admin.grahaanandaregency.com/api/site_plan")
+      .then((res) => {
+        this.loading = false;
+        this.siteplan = res.data.data[0];
+      });
   },
 };
 </script>
