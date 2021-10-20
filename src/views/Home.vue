@@ -10,9 +10,6 @@
             Segera Wujudkan Keluarga Mandiri Sejahtera Hanya Di Perumahan Graha
             Ananda Regency.
           </p>
-          <button class="btn btn-primary brown">
-            Download Price List
-          </button>
         </div>
         <div class="col-md-6 p-0 order-1">
           <slider animation="fade" class="slider-style">

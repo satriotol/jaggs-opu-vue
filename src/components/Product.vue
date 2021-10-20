@@ -64,11 +64,16 @@
               <p class="text-justify">
                 {{ product.description }}
               </p>
+              <h1 class="price">{{ product.price }}</h1>
             </div>
           </div>
-          <div class="text-center mt-4">
-            <h2>{{ product.price }}</h2>
-          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="/RumahT4.png" download>
+            <button class="btn btn-light rounded-pill kpr">
+              Download Simulasi KPR
+            </button>
+          </a>
         </div>
       </div>
     </div>
@@ -102,6 +107,9 @@
   background-color: var(--brown);
   color: white;
 }
+.kpr {
+  color: var(--brown);
+}
 .main {
   height: 400px;
   object-fit: cover;
@@ -117,6 +125,9 @@
     height: 100px;
     object-fit: cover;
     width: 120px;
+  }
+  .price {
+    text-align: center;
   }
 }
 </style>
