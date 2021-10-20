@@ -3,11 +3,11 @@
     <div class="container-fluid header h-100" id="home">
       <div class="row align-items-center h-100 flex-column-reverse flex-md-row">
         <div class="col-md-1"></div>
-        <div class="col-md-5 p-0">
+        <div class="header-text col-md-5 p-0">
           <h1>Graha Ananda Regency</h1>
           <p>
-            Segera Wujudkan Keluarga Mandiri Sejahtera Hanya Di Perumahan Graha
-            Ananda Regency.
+            "SEGERA WUJUDKAN KELUARGA MANDIRI SEJAHTERA HANYA DI PERUMAHAN GRAHA
+            ANANDA REGENCY. BELI RUMAHNYA GRATIS KULIAHNYA!"
           </p>
         </div>
         <div class="col-md-6 p-0 order-1">
@@ -114,7 +114,7 @@ hr {
 </style>
 <style scoped>
 @media (max-width: 768px) {
-  .col-md-5.p-0 {
+  .header-text {
     text-align: center !important;
     margin-top: 1rem;
   }

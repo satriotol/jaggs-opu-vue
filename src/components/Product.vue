@@ -47,7 +47,6 @@
                   :minSwipeDistance="0"
                   :perPage="3"
                   :paginationEnabled="false"
-                  class="text-center"
                 >
                   <slide v-for="(image, index) in product.image" :key="index">
                     <img
@@ -60,20 +59,20 @@
               </div>
             </div>
             <div class="col-md-6 product-text">
-              <div class="text-center">
-                <h3>{{ product.title }}</h3>
-              </div>
+              <h3>{{ product.title }}</h3>
               <div class="text-justify" v-html="product.description"></div>
-              <h1 class="price">{{ product.price }}</h1>
+              <div class="text-center">
+                <h1 class="price">{{ product.price }}</h1>
+              </div>
+              <div class="text-center mt-4">
+                <a href="/RumahT4.png" download>
+                  <button class="btn btn-light rounded-pill kpr">
+                    Download Simulasi KPR
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="text-center mt-4">
-          <a href="/RumahT4.png" download>
-            <button class="btn btn-light rounded-pill kpr">
-              Download Simulasi KPR
-            </button>
-          </a>
         </div>
       </div>
     </div>

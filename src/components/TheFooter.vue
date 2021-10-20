@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container-fluid pt-5">
+    <div class="container-fluid pt-5 mt-5">
       <div class="container">
         <div class="row">
           <div class="col-md-7">
@@ -38,8 +38,8 @@
       </div>
       <div class="text-center">
         <p class="m-0 py-3">
-          <span class="font-weight-bold">@Copyright JAGGS.</span> All Rights
-          Reserved
+          <span class="font-weight-bold">@Copyright Graha Ananda Regency.</span>
+          All Rights Reserved
         </p>
       </div>
     </div>

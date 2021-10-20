@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div class="container mt-5">
       <div class="d-flex justify-content-center">
         <div class="header-text text-center">
           <h2>Tentang Kita</h2>
