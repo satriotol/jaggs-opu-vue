@@ -1,19 +1,23 @@
 <template>
   <div>
-    <div class="container">
-      <div class="d-flex justify-content-center">
-        <div class="header-text ">
-          <h2>Site Plan</h2>
-          <hr />
+    <div class="position-relative">
+      <img class="line-right" src="../assets/line-right.png" />
+      <img class="line-left" src="../assets/line-left.png" />
+      <div class="container">
+        <div class="d-flex justify-content-center">
+          <div class="header-text ">
+            <h2>Site Plan</h2>
+            <hr />
+          </div>
         </div>
-      </div>
-      <div v-if="loading" class="text-center">
-        <div class="spinner-border" role="status">
-          <span class="sr-only">Loading...</span>
+        <div v-if="loading" class="text-center">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
         </div>
-      </div>
-      <div class="row mt-3 text-center" v-else>
-        <img :src="siteplan.image" class="img-fluid" alt="" />
+        <div class="row mt-3 d-flex justify-content-center" v-else>
+          <img :src="siteplan.image" class="img-fluid site-plan" alt="" />
+        </div>
       </div>
     </div>
   </div>
@@ -29,6 +33,23 @@
   border: 1px solid #534a40;
   width: 50%;
   margin-top: 0.5rem;
+}
+.line-left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: -1;
+  width: 10%;
+}
+.line-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: -1;
+  width: 10%;
+}
+.site-plan {
+  max-width: 80% !important;
 }
 </style>
 <script>
