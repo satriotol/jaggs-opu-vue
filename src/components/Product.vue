@@ -124,7 +124,7 @@
   .img-carousel {
     height: 100px;
     object-fit: cover;
-    width: 120px;
+    width: 100px;
   }
   .price {
     text-align: center;
