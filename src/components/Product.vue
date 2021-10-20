@@ -60,10 +60,10 @@
               </div>
             </div>
             <div class="col-md-6 product-text">
-              <h3>{{ product.title }}</h3>
-              <p class="text-justify">
-                {{ product.description }}
-              </p>
+              <div class="text-center">
+                <h3>{{ product.title }}</h3>
+              </div>
+              <div class="text-justify" v-html="product.description"></div>
               <h1 class="price">{{ product.price }}</h1>
             </div>
           </div>
