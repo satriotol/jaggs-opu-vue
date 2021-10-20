@@ -47,6 +47,9 @@
   .description {
     margin-top: 1rem;
   }
+  .mt-3 {
+    margin-top: 0.25rem !important;
+  }
 }
 </style>
 <script>

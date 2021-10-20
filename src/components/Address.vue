@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container-fluid brown" v-if="!loading">
+    <div class="container-fluid brown margin-alamat-hp" v-if="!loading">
       <div class="row align-items-center h-100">
         <div class="col-md-6 h-100" data-aos="fade-right">
           <div class="text-right">
@@ -22,6 +22,12 @@
 }
 .white {
   background-color: white;
+}
+@media (max-width: 768px) {
+  .margin-alamat-hp {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+  }
 }
 </style>
 <script>

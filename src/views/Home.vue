@@ -116,7 +116,7 @@ hr {
 @media (max-width: 768px) {
   .header-text {
     text-align: center !important;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   .slider-style {
     height: 250px;
