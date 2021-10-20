@@ -2,10 +2,9 @@
   <div>
     <div class="container-fluid header h-100" id="home">
       <div class="row align-items-center h-100 flex-column-reverse flex-md-row">
-        <div class="col-md-2"></div>
-        <div class="col-md-4 p-0">
-          <h1 class="m-0">Graha Ananda</h1>
-          <h1>Regency</h1>
+        <div class="col-md-1"></div>
+        <div class="col-md-5 p-0">
+          <h1 class="m-0">Graha Ananda Regency</h1>
           <p>
             Segera Wujudkan Keluarga Mandiri Sejahtera Hanya Di Perumahan Graha
             Ananda Regency.
@@ -115,7 +114,7 @@ hr {
 </style>
 <style scoped>
 @media (max-width: 768px) {
-  .col-md-4.p-0 {
+  .col-md-5.p-0 {
     text-align: center !important;
     margin-top: 1rem;
   }

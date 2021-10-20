@@ -59,7 +59,7 @@
                 </carousel>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 product-text">
               <h3>{{ product.title }}</h3>
               <p class="text-justify">
                 {{ product.description }}
@@ -128,6 +128,9 @@
   }
   .price {
     text-align: center;
+  }
+  .product-text {
+    margin-top: 1rem;
   }
 }
 </style>

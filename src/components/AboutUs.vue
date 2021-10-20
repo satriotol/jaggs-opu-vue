@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="col-md-6" data-aos="fade-right">
-          <p class="text-justify">
+          <p class="text-justify description">
             {{ about.description }}
           </p>
         </div>
@@ -42,6 +42,11 @@
   border: 1px solid #534a40;
   width: 50%;
   margin-top: 0.5rem;
+}
+@media (max-width: 768px) {
+  .description {
+    margin-top: 1rem;
+  }
 }
 </style>
 <script>
