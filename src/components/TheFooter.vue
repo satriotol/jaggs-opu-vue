@@ -7,11 +7,13 @@
             <h4>Kantor Pusat</h4>
             <div class="mt-3">
               <p>
-                Sentul International Convention Center SICC Tower 3rd Floor
-                Jalan Jendral Sudirman No.1 Sentul City, Bogor
+                {{ contact.address }}
               </p>
-              <p>grahaanandaregency@gmail.com</p>
-              <p>(021) 8795 3448 / 8795 3550 / 8795 3551</p>
+              <p>{{ contact.email }}</p>
+              <span v-for="(phone, index) in phones" :key="index">
+                {{ phone.phone_number }}
+                <span v-if="phones.length != index + 1">/</span>
+              </span>
             </div>
           </div>
           <div class="col-md-5">
@@ -62,6 +64,8 @@ export default {
   data() {
     return {
       social_medias: [],
+      phones: [],
+      contact: "",
       loading: false,
     };
   },
@@ -70,7 +74,17 @@ export default {
     axios
       .get("https://admin.grahaanandaregency.com/api/social_media")
       .then((res) => {
-        this.loading = false;
+        axios
+          .get("https://admin.grahaanandaregency.com/api/phone")
+          .then((res) => {
+            axios
+              .get("https://admin.grahaanandaregency.com/api/contact")
+              .then((res) => {
+                this.loading = false;
+                this.contact = res.data.data[0];
+              });
+            this.phones = res.data.data;
+          });
         this.social_medias = res.data.data;
       });
   },
