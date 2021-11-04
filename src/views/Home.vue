@@ -105,7 +105,7 @@ hr {
   margin-bottom: 4rem;
   margin-top: 4rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .my-6 {
     margin-bottom: 0rem;
     margin-top: 0rem;
@@ -113,7 +113,7 @@ hr {
 }
 </style>
 <style scoped>
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .header-text {
     text-align: center !important;
     margin-top: 2rem;

@@ -23,7 +23,7 @@
 .white {
   background-color: white;
 }
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .margin-alamat-hp {
     margin-top: 3rem !important;
     margin-bottom: 3rem !important;
@@ -52,7 +52,7 @@ export default {
 };
 </script>
 <style scoped>
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .col-md-6.pr-0 {
     padding-left: 0;
   }

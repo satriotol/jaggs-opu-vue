@@ -82,7 +82,7 @@ export default {
 /* .navbar {
   border-bottom: 2px solid var(--brown);
 } */
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .nav-item {
     margin-top: 0.25rem !important;
     margin-bottom: 0.25rem !important;
