@@ -65,7 +65,7 @@
                 <h1 class="price">{{ product.price }}</h1>
               </div>
               <div class="text-center mt-4">
-                <a href="/RumahT4.png" download>
+                <a href="/PRICELISTWEB.jpg" download>
                   <button class="btn btn-light rounded-pill kpr">
                     Download Simulasi KPR
                   </button>
