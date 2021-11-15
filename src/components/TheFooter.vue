@@ -19,17 +19,16 @@
           <div class="col-md-5">
             <h4>Sosial Media</h4>
             <div class="row">
-              <div class="col col-md-2">
-                <div
-                  class="social-icon "
-                  v-for="(social_media, index) in social_medias"
-                  :key="index"
-                >
+              <div
+                class="col-md-2 col-3 mx-auto"
+                v-for="(social_media, index) in social_medias"
+                :key="index"
+              >
+                <div class="social-icon ">
                   <a :href="social_media.link" target="_blank">
                     <img
                       :src="social_media.image"
                       class="rounded-circle"
-                      alt=""
                     />
                   </a>
                 </div>
@@ -55,6 +54,8 @@
 .social-icon img {
   height: 50px;
   width: 50px;
+  object-fit: cover;
+  object-position: center;
 }
 </style>
 <script>
