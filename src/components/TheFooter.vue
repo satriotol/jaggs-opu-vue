@@ -20,16 +20,13 @@
             <h4>Sosial Media</h4>
             <div class="row">
               <div
-                class="col-md-2 col-3 mx-auto"
+                class="col-md-2 col-3"
                 v-for="(social_media, index) in social_medias"
                 :key="index"
               >
                 <div class="social-icon ">
                   <a :href="social_media.link" target="_blank">
-                    <img
-                      :src="social_media.image"
-                      class="rounded-circle"
-                    />
+                    <img :src="social_media.image" class="rounded-circle" />
                   </a>
                 </div>
               </div>
@@ -52,10 +49,16 @@
   color: white;
 }
 .social-icon img {
-  height: 50px;
+  max-height: 50px;
   width: 50px;
   object-fit: cover;
   object-position: center;
+}
+@media (max-width: 767.98px) {
+  .social-icon img {
+    height: 25px;
+    width: 25px;
+  }
 }
 </style>
 <script>
